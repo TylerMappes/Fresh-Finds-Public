@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Analytics"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/textViewTitle">
+
+        <Button
+            android:id="@+id/buttonYTD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YTD"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/buttonMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/buttonWeekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weekly"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/buttonDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+        <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewTotalListeners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Listeners: 0"
+        android:layout_below="@id/barChart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/buttonBackToHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Home"
+        android:layout_below="@id/textViewTotalListeners"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

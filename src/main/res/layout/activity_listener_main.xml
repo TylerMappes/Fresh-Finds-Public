@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Fresh Finds"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- You May Like Section -->
+    <LinearLayout
+        android:id="@+id/layoutYouMayLike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/textViewWelcome"
+        android:layout_marginTop="16dp">
+
+        <!-- Dynamic generation of suggested songs -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/imageViewSongThumbnail"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/default_thumbnail"/>
+
+            <TextView
+                android:id="@+id/textViewSongName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Song Name"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:id="@+id/imageViewArtistPhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/default_artist_photo"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Browse More Button -->
+    <Button
+        android:id="@+id/buttonBrowseMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse/Find More"
+        android:layout_below="@id/layoutYouMayLike"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Playlist Management Section -->
+    <TextView
+        android:id="@+id/textViewPlaylistManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Playlist Management"
+        android:textSize="20sp"
+        android:layout_below="@id/buttonBrowseMore"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/buttonCreatePlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create New Playlist"
+        android:layout_below="@id/textViewPlaylistManagement"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/buttonAddToPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Existing Playlist"
+        android:layout_below="@id/buttonCreatePlaylist"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/buttonViewAllPlaylists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View All Playlists"
+        android:layout_below="@id/buttonAddToPlaylist"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/buttonReturnToMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Return to Main Screen"
+        android:layout_below="@id/buttonViewAllPlaylists"
+        android:layout_marginTop="32dp"/>
+
+</RelativeLayout>
